@@ -41,6 +41,7 @@ int lcs(string X, string Y)
             else
                 L[mode][j] = max(L[1-mode][j], L[mode][j-1]);
         }
+        mode=1-mode; //changing roles of the rows
     }
  
     /* Last filled entry contains length of LCS
